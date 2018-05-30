@@ -516,7 +516,7 @@ if(WIN32 AND NOT UNIX)
 
 	# VS redist
 	list(APPEND CPACK_NSIS_EXTRA_INSTALL_COMMANDS "
-               ExecWait '\\\"$INSTDIR\\\\redist\\\\${VSREDIST}\\\" /install /passive /norestart /quiet'
+               ExecWait '\\\"$INSTDIR\\\\redist\\\\${VSREDIST}\\\" /install /norestart /log c:\\\\db4slog\\\\vcredist.log'
                Delete '\\\"$INSTDIR\\\\redist\\\\${VSREDIST}\\\"'
                ")
 else(WIN32 AND NOT UNIX)
